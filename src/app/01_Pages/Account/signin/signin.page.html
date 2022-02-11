@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons color="primary" slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]='form'>
+
+    <ion-label position= 'floating'>Email </ion-label>
+    <ion-item>
+      <ion-input placeholder="example@gmail.com" formControlName='email'></ion-input>
+    </ion-item>
+
+    <ion-label position= 'floating'>Password </ion-label>
+  <ion-item>
+    <ion-input type="password" placeholder="********" formControlName='password'></ion-input>
+  </ion-item>
+
+<ion-button (click)="submitProduct()" expand="block" shape="round" [disabled]="form.invalid">
+Save Product
+</ion-button>
+
+</form>
+</ion-content>

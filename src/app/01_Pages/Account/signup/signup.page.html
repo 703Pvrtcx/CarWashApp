@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Add Product</ion-title>
+    <ion-buttons slot="start" >
+        <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]='form'>
+
+    <ion-label position= 'floating'>First Name: </ion-label>
+    <ion-item>
+      <ion-input placeholder="John" formControlName='name'></ion-input>
+    </ion-item>
+
+    <ion-label position= 'floating'>Last Name: </ion-label>
+    <ion-item>
+      <ion-input placeholder="Dou" formControlName='name'></ion-input>
+    </ion-item>
+
+  <ion-item>
+    <ion-label position= 'floating'>Slug: </ion-label>
+    <ion-input formControlName='slug'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= 'floating'>Price: </ion-label>
+    <ion-input formControlName='price'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= 'floating'>Category: </ion-label>
+    <ion-input formControlName='category' ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= 'floating'>Image Url: </ion-label>
+    <ion-input formControlName='imageURL' ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position= 'floating'>Description: </ion-label>
+    <ion-textarea formControlName='description' ></ion-textarea>
+  </ion-item>
+<ion-button (click)="submitProduct()" expand="block" shape="round" [disabled]="form.invalid">
+Save Product
+</ion-button>
+
+</form>
+</ion-content>

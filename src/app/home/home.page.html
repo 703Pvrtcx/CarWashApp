@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="home" >
+
+  <ion-card class="bg-transparent" >
+       <img height="150" src="../../assets/images/bg_01.jpg" alt="image">
+   
+       <ion-card-header>
+      <ion-card-title class="title"> Welcome to Sek'Clean Car-Wash</ion-card-title>
+      <br>
+      <ion-card-subtitle class="subtitle">We clean All Types of Vehicles</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="tertiary"  (click)="signup()" expand="block"  shape="round">
+      Sign Up
+    </ion-button>
+    <br>
+    <ion-button color="light" (click)="signin()" expand="block" fill="outline" shape="round">
+      Sign In
+    </ion-button>
+  </ion-card>
+
 </ion-content>
